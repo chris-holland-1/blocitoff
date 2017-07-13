@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="blocitoff">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Bloc Base Project</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <ui-view></ui-view>
+
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+    <!-- AngularUI Router -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+
+    <!-- FireBase -->
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBZzqMfa7dCI1zeMOWkmaCuKyANFoAqSvM",
+            authDomain: "blocitoff-7fa84.firebaseapp.com",
+            databaseURL: "https://blocitoff-7fa84.firebaseio.com",
+            projectId: "blocitoff-7fa84",
+            storageBucket: "blocitoff-7fa84.appspot.com",
+            messagingSenderId: "801224942945"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+    <!-- Application Files -->
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/controllers/HomeCtrl.js"></script>
+    <script src="/scripts/services/Firebase.js"></script>
+    
+</body>
+</html>
