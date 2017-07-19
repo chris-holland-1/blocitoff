@@ -1,0 +1,36 @@
+[debug] [2017-07-14T20:24:25.192Z] ----------------------------------------------------------------------
+[debug] [2017-07-14T20:24:25.195Z] Command:      /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2017-07-14T20:24:25.196Z] CLI Version:  3.9.1
+[debug] [2017-07-14T20:24:25.196Z] Platform:     darwin
+[debug] [2017-07-14T20:24:25.196Z] Node Version: v6.9.2
+[debug] [2017-07-14T20:24:25.197Z] Time:         Fri Jul 14 2017 15:24:25 GMT-0500 (CDT)
+[debug] [2017-07-14T20:24:25.197Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-07-14T20:24:25.213Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-07-14T20:24:25.213Z] > authorizing via signed-in user
+[debug] [2017-07-14T20:24:25.215Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-07-14T20:24:25.216Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/nuPrFZnwM25OvzUixaNxkEytPYSPM7T5Z0mAKXyWRHY',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Fri Jul 14 2017 15:24:25 GMT-0500 (CDT)
+[debug] [2017-07-14T20:24:25.655Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-14T20:24:25.658Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/blocitoff-7fa84  
+ Fri Jul 14 2017 15:24:25 GMT-0500 (CDT)
+[debug] [2017-07-14T20:24:26.058Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-14T20:24:26.059Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/blocitoff-7fa84/tokens  
+ Fri Jul 14 2017 15:24:26 GMT-0500 (CDT)
+[debug] [2017-07-14T20:24:26.707Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/chrisholland/Sites/blocitoff'...
+[info] 
+[debug] [2017-07-14T20:24:26.710Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/blocitoff-7fa84  
+ Fri Jul 14 2017 15:24:26 GMT-0500 (CDT)
+[debug] [2017-07-14T20:24:27.152Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-14T20:24:27.153Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/801224942945/clients/_:getWebAppConfig  
+ Fri Jul 14 2017 15:24:27 GMT-0500 (CDT)
+[debug] [2017-07-14T20:24:27.922Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-14T20:24:27.949Z] TypeError: Cannot read property 'public' of undefined
+[error] 
+[error] Error: An unexpected error has occurred.

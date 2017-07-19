@@ -1,1 +1,58 @@
-<h1>Home Page</h1>
+<header>
+  <h1>Blocitoff</h1>
+</header>
+
+<section class="navbar" ng-controller="HomeCtrl">
+  <a ng-click="setTasks('all')">All</a> | <a ng-click="setTasks('active')">Active</a> | <a ng-click="setTasks('archived')">Archived</a> | <a ng-click="setTasks('expired')">Expired</a> | <a ng-click="setTasks('completed')">Completed</a>
+</section>
+
+<div id="container">
+  <section class="list-tasks">
+    <h4>Place Holder for Tasks</h4>
+  </section>
+
+  <section class="title">
+    <h4>{{ title }}</h4>
+  </section>
+
+  <section class="tasks">
+    <!-- List of Tasks -->
+    <section ng-repeat="task in tasks | orderBy: ['!active', 'expired']" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
+      <!-- Task checkboxes -->
+      <input type="checkbox" ng-model="task.selected" ng-change="selectTask(task)">
+      <!-- Task name -->
+      <span ng-class="{archived: !task.active, active: task.active, completed: task.completed, expired: task.expired}" ng-hide="hoverEdit">{{ task.name }}</span>
+      <!-- Editable task names -->
+      <input ng-model="task-name" class="textboxes" ng-class="{archived: !task.active, active: task.active, completed: task.completed, expired: task.expired}" ng-show="hoverEdit" ng-change="tasks.$save(task)">
+    </section>
+
+  </section>
+  <br>
+
+  <!-- Mark complete -->
+  <button ng-click="taskComplete()" ng-hide="title == 'Completed Tasks'">Complete</button>
+
+  <!-- Delete task -->
+  <button ng-click="removeTask()">Delete</button>
+
+  <!-- Archive task -->
+  <button ng-click="archiveTask()" ng-hide="title == 'Archived Tasks' || title == 'Expired Tasks' || title == 'Completed Tasks'">Archive</button>
+
+  <!-- Reactivate task -->
+  <button ng-click="reactivateTask()" ng-hide="title == 'Active Tasks'">Reactivate</button>
+  <br><br><br>
+
+</div>
+
+<section class="create-task">
+    <div class="create-task-label">
+        <h4>Create Task</h4>
+    </div>
+    <p class="task-name">
+        <form ng-submit="home.task.createTask(newTaskName)">
+            <label>Task:</label>
+            <input type="text" ng-model="newTaskName" required>
+            <button type="submit">Enter</button>
+        </form>
+    </p>
+</section>
